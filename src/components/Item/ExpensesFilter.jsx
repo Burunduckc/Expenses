@@ -1,4 +1,3 @@
-import {useState} from "react";
 import './EspensesFilter.scss';
 
 export const ExpensesFilter = (props) => {
