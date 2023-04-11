@@ -37,6 +37,8 @@ export const ExpenseForm = (props) => {
     }
 
 
+
+
     const submitHendler = (event) => {
         event.preventDefault();
 
@@ -52,6 +54,7 @@ export const ExpenseForm = (props) => {
     }
 
     return (
+
         <form onSubmit = {submitHendler}>
         <div className='new-expense__controls'>
             <div className='new-expense__control'>
@@ -80,6 +83,7 @@ export const ExpenseForm = (props) => {
             </div>
         </div>
         <div className='new-expense__actions'>
+            <button type='button' onClick={props.onCancel}>Cancel</button>
             <button type='submit'>Add Expense</button>
         </div>
     </form>
