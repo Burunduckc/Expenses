@@ -1,6 +1,6 @@
 import './expenses.scss'
 import {useState} from "react";
-import {ExpensionItem} from "./ExpensionItem";
+import {ExpensesList} from "./ExpensesList";
 import {Card} from "../UI/Card";
 import {ExpensesFilter as Filter} from "./ExpensesFilter";
 
@@ -17,19 +17,14 @@ const Expens = (prop) => {
     })
 
     return(
-    <div>
-        <Card className='expenses'>
-            <Filter selectd = {fieldYear} onChangeFilter ={filterChangeHandler}/>
-            {filterExpenses.map(expense => <ExpensionItem
-            key = {expense.id }
-            price={expense.amount}
-            name={expense.title}
-            data={expense.date}
-
-            />)}
-        </Card>
-    </div>
+        <div>
+            <Card className='expenses'>
+                <Filter selectd = {fieldYear} onChangeFilter ={filterChangeHandler}/>
+                <ExpensesList items = {filterExpenses}/>
+            </Card>
+        </div>
     )
 }
+
 
 export default Expens

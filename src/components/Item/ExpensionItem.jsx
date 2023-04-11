@@ -5,6 +5,7 @@ import {Card} from "../UI/Card";
 export const ExpensionItem = (prop) => {
 
     return(
+        <li>
         <Card className='expense-item'>
             {/*<div>{prop.data.toDateString()}</div>*/}
             <Datefrom data={prop.data}/>
@@ -13,5 +14,6 @@ export const ExpensionItem = (prop) => {
                 <div className='expense-item__price'>${prop.price}</div>
             </div>
         </Card>
+        </li>
     )
 }
